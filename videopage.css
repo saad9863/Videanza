@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+@keyframes logoAnimation {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+
+img {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.flex-div {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  padding: 10px 2%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-right,
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right img {
+  width: 25px;
+  margin-right: 25px;
+}
+
+.nav-right .user-icon {
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 0;
+}
+
+.nav-left .menu-icon {
+  width: 22px;
+  margin-right: 25px;
+}
+
+.nav-left .Videanza-logo {
+  width: 130px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: logoAnimation 10s infinite;
+}
+
+.nav-middle {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-right: 5%;
+  margin-left: 2%;
+  max-width: 450px;
+}
+
+.nav-middle .mic-icon {
+  width: 16px;
+}
+
+.nav-middle .search-box {
+  display: flex;
+  flex: 1;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
+  padding: 8px 12px;
+  border-radius: 25px;
+  align-items: center;
+}
+
+.nav-middle .search-box input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  margin-right: 10px;
+}
+
+.nav-middle .search-box img {
+  width: 15px;
+}
+
+.sidebar {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 80px;
+  font-size: small;
+  padding-left: 2%;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+.small-sidebar {
+  display: none;
+}
+.shortcut-links a img {
+  width: 20px;
+  margin-right: 20px;
+}
+
+.shortcut-links a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.shortcut-links a:first-child {
+  color: rgb(206, 15, 15);
+}
+
+.sidebar hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  width: 85%;
+}
+
+.subscribed-list h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #5a5a5a;
+}
+
+.subscribed-list a img {
+  width: 25px;
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+  max-width: 1280px;
+  margin-top: 70px;
+  padding: 20px;
+  position: relative;
+  margin-left: 17%;
+  margin-right: 17%;
+  margin-right: auto;
+}
+
+.play-video {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.video-details {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-top: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.channel-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.channel-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-time {
+  color: #777;
+}
+
+.video-description {
+  margin-bottom: 15px;
+}
+
+.comment-box {
+  display: flex;
+  margin-top: 15px;
+}
+
+.comment-box textarea {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.comment-box button {
+  padding: 8px 15px;
+  background-color: #9b1c13;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comment-box button:hover {
+  background-color: #45a049;
+}
+
+.comment-avatar{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+
+}
+
+.play-video video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.video-suggestions-sidebar {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  max-width: 300px;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  padding-top: 20px;
+  font-size: small;
+  padding-left: 2%;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.vid-list {
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.thumbnail {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.vid-list:hover {
+  transform: scale(1.05);
+}
+
+.vid-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.vid-list .flex-div img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.channel-name {
+  font-size: 16px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.vid-info a {
+  font-size: 18px;
+  color: #555;
+  text-decoration: none;
+}
+
+.vid-info p {
+  font-size: 14px;
+  color: #080808;
+  margin: 8px 0;
+}
+
+.flex-container {
+  margin-left: 6%;
+}
+
+@media (max-width: 900px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .nav-middle .mic-icon {
+    display: none;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .video-suggestions-sidebar {
+    width: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    padding-top: 20px;
+    font-size: small;
+    padding-left: 2%;
+    height: auto;
+    box-shadow: none;
+    z-index: 100;
+  }
+
+  .list-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-icon,
+  .sidebar,
+  .nav-middle .mic-icon,
+  .video-suggestions-sidebar {
+    display: none;
+  }
+
+  .container,
+  .larger-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .larger-container {
+    margin-left: 2%;
+  }
+
+  .video-suggestions-sidebar {
+    width: 100%;
+    max-width: none;
+  }
+}
